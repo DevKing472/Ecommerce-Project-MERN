@@ -6,6 +6,7 @@
   "author": "",
   "license": "ISC",
   "scripts": {
-    "start": "pnpm --parallel dev"
+    "start": "pnpm --parallel dev",
+    "preinstall": "npx only-allow pnpm"
   }
 }
