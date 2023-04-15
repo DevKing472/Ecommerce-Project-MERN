@@ -12,7 +12,7 @@ import {
 } from 'mdb-react-ui-kit';
 import Link from 'next/link';
 import Head from 'next/head';
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect } from 'react';
 import { CartItem, Product } from '@/types';
 import { fetcherGetUnauthorized, formatAsPrice } from '@/helpers';
 import { ItemList, Loader } from '@/components';

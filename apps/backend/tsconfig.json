@@ -5,7 +5,8 @@
     "baseUrl": ".",
     "rootDir": ".",
     "typeRoots": ["@types"],
-    "composite": true
+    "composite": true,
+    "noEmit": true
   },
   "ts-node": { "esm": true }
 }
