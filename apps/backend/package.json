@@ -1,5 +1,5 @@
 {
-  "name": "@backend",
+  "name": "backend",
   "version": "1.0.0",
   "description": "",
   "type": "module",
@@ -7,7 +7,7 @@
   "exports": "./dist",
   "scripts": {
     "start": "ts-node ./bin/www.ts",
-    "watch": "nodemon ./bin/www.ts",
+    "dev": "nodemon ./bin/www.ts",
     "test": "NODE_OPTIONS=--experimental-vm-modules vitest",
     "test:watch": "NODE_OPTIONS=--experimental-vm-modules vitest --watch",
     "coverage": "NODE_OPTIONS=--experimental-vm-modules vitest run --coverage",
