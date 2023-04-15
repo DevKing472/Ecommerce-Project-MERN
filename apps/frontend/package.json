@@ -1,0 +1,33 @@
+{
+  "name": "@frontend",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.4.0",
+    "@paypal/paypal-js": "^5.1.6",
+    "@paypal/react-paypal-js": "^7.8.3",
+    "@types/node": "^18.15.11",
+    "@types/react": "^18.0.33",
+    "@types/react-dom": "^18.0.11",
+    "browser-image-compression": "^2.0.2",
+    "eslint": "^8.37.0",
+    "eslint-config-next": "^13.3.0",
+    "mdb-react-ui-kit": "^5.1.0",
+    "next": "^13.3.0",
+    "nodemon": "^2.0.22",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "swr": "^2.1.2",
+    "typescript": "^5.0.3"
+  },
+  "devDependencies": {
+    "prettier": "^2.8.7"
+  }
+}

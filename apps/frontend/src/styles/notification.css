@@ -1,0 +1,84 @@
+.Notification {
+  width: 300px;
+  display: grid;
+  grid-auto-flow: row;
+  gap: 1px;
+  align-items: center;
+  position: fixed;
+  color: #2c58a0;
+  font-weight: bold;
+  background-color: #dfe7f6;
+  box-sizing: border-box;
+  top: 160px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  animation: 0.3s linear unhide forwards;
+}
+
+.Notification:hover {
+  opacity: 1;
+  transition: all 0.1s;
+}
+
+.Notification .header {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Notification .header h5 {
+  padding: 0;
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.Notification > hr {
+  border: 1px solid #2c58a0;
+  padding: 0;
+  margin: 0;
+}
+
+.Notification > p {
+  font-size: 0.9rem;
+}
+
+.Notification.hide {
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.Notification.error {
+  background-color: #f9e1e5;
+  color: white;
+}
+
+.Notification.error button,
+.Notification.error hr {
+  color: white;
+}
+
+.Notification button {
+  background-color: transparent;
+  cursor: pointer;
+  padding: 3px;
+  border: 0;
+  color: #2c58a0;
+  font-weight: bold;
+  font-size: 1.5rem;
+  border-radius: 5px;
+}
+
+@keyframes unhide {
+  from {
+    filter: opacity(0);
+  }
+
+  to {
+    filter: opacity(50);
+  }
+}
