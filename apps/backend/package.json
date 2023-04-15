@@ -5,6 +5,7 @@
   "type": "module",
   "main": "./dist/bin/www.js",
   "exports": "./dist",
+  "private": true,
   "scripts": {
     "start": "ts-node ./bin/www.ts",
     "dev": "nodemon ./bin/www.ts",

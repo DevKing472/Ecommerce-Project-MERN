@@ -4,6 +4,7 @@
   "description": "",
   "keywords": [],
   "author": "",
+  "private": true,
   "license": "ISC",
   "scripts": {
     "start": "pnpm --parallel dev",
