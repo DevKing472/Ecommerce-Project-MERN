@@ -109,18 +109,14 @@ export function CartReducer(state: Cart, action: CartActions) {
 
     case 'UPDATE_PRICES':
       action.payload.forEach((product: Product) => {
-        state.cartItems[
-          state.cartItems.findIndex((item) => item.id === product._id)
-        ].price = product.price;
-        state.cartItems[
-          state.cartItems.findIndex((item) => item.id === product._id)
-        ].discount = product.discount;
-        state.cartItems[
-          state.cartItems.findIndex((item) => item.id === product._id)
-        ].shippingCost = product.deliveryPrice;
-        state.cartItems[
-          state.cartItems.findIndex((item) => item.id === product._id)
-        ].totalPrice = product.totalPrice;
+        state.cartItems.map((item) => {
+          if (item.id === product._id) {
+            item.price = product.price;
+            item.discount = product.discount;
+            item.deliveryPrice = product.deliveryPrice;
+            item.totalPrice = product.totalPrice;
+          }
+        });
       });
       return {
         ...state,

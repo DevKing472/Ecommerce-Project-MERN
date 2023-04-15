@@ -12,7 +12,7 @@ import {
 } from 'mdb-react-ui-kit';
 import Link from 'next/link';
 import Head from 'next/head';
-import { useEffect, useMemo } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { CartItem, Product } from '@/types';
 import { fetcherGetUnauthorized, formatAsPrice } from '@/helpers';
 import { ItemList, Loader } from '@/components';
@@ -28,12 +28,10 @@ export default function Cart() {
     fetcherGetUnauthorized
   );
 
-  const products = useMemo(() => {
-    if (!isLoading && data && data.products) {
-      cart.updatePrices(data.products);
-      return data.products;
-    }
-  }, [isLoading, data, cart]);
+  useEffect(() => {
+    if (!data || !data.products || data.products.length < 1) return;
+    cart.updatePrices(data.products);
+  }, [data]);
 
   if (error)
     return (
@@ -93,8 +91,9 @@ export default function Cart() {
                   </tr>
                 </MDBTableHead>
                 <MDBTableBody>
-                  {products &&
-                    products.map((product: Product, index: number) => (
+                  {data &&
+                    data.products &&
+                    data.products.map((product: Product, index: number) => (
                       <ItemList
                         key={product._id}
                         product={product}
