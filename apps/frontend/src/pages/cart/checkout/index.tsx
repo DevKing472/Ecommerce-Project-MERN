@@ -21,7 +21,7 @@ import {
   useCallback,
 } from 'react';
 import { useRouter } from 'next/router';
-import { Address, Order, Response } from '@/types';
+import { Address, Response } from '@/types';
 import {
   MDBBtn,
   MDBCard,
@@ -79,7 +79,7 @@ export default function Checkout() {
     );
     if (!shippingAddress.current || !billingAddress.current) return;
     addAddressesToOrder(
-      order.data.order.id,
+      order.data.order._id,
       shippingAddress.current,
       billingAddress.current
     );
@@ -151,7 +151,7 @@ export default function Checkout() {
       )
         return;
 
-      if (user.id === '') {
+      if (user._id === '') {
         const reg = await registerAnonUser(user);
         if (!reg) return;
       }
