@@ -7,7 +7,7 @@ export function UserProvider({ children }: PropsWithChildren) {
   const initialState: User = {
     username: '',
     email: '',
-    id: '',
+    _id: '',
     isAdmin: false,
     isAnon: false,
   };

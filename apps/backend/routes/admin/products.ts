@@ -1,6 +1,6 @@
-import { upload, passport } from '@/configs/index.js';
-import { ProductsController } from '@/controllers/index.js';
-import { isUserAdmin } from '@/middlewares/is-user-admin.js';
+import { upload, passport } from 'configs/index.js';
+import { ProductsController } from 'controllers/index.js';
+import { isUserAdmin } from 'middlewares/index.js';
 import { ProductRouter } from '../products.js';
 
 ProductRouter.post(

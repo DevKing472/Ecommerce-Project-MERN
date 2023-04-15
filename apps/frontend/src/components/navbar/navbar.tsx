@@ -21,7 +21,7 @@ import { useCart, useUser } from '@/hooks';
 export function Navbar() {
   const [showNavToggler, setShowNavToggler] = useState(false);
   const [mounted, setMounted] = useState(false);
-  const { isAdmin, id, logout } = useUser();
+  const { isAdmin, _id, logout } = useUser();
   const { itemCount } = useCart();
   const { pathname } = useRouter();
 
@@ -93,7 +93,7 @@ export function Navbar() {
               </Link>
             </MDBNavbarItem>
             <MDBNavbarItem onClick={() => setShowNavToggler(false)}>
-              {id === '' ? (
+              {_id === '' ? (
                 <Link
                   href="/auth"
                   className={`nav-link ${pathname === '/auth' ? 'active' : ''}`}

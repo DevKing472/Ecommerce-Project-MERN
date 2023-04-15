@@ -26,15 +26,17 @@ export function LogInForm({ router }: Props) {
     }
 
     const body = { email, password };
-    const response = await fetch(process.env.BACKEND_URL + '/auth/login', {
-      method: 'POST',
-      headers: {
-        'content-type': 'application/json',
-      },
-      credentials: 'include',
-      body: JSON.stringify(body),
-    });
-    const data = await response.json();
+    const data = await (
+      await fetch(process.env.BACKEND_URL + '/auth/login', {
+        method: 'POST',
+        headers: {
+          'content-type': 'application/json',
+        },
+        credentials: 'include',
+        body: JSON.stringify(body),
+      })
+    ).json();
+    console.log(data);
     if (!data.success) {
       open('Error', data.message, 'error');
       return;

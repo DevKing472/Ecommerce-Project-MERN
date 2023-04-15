@@ -1,7 +1,7 @@
 import { AdminController } from '../../controllers/index.js';
 import { Router } from 'express';
 
-export const AdminProductRouter = Router();
+export const AdminProductRouter: Router = Router();
 
 AdminProductRouter.get('/', AdminController.getAllOrdersAdmin);
 AdminProductRouter.get('/:id', AdminController.getOneOrderAdmin);

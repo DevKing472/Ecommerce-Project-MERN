@@ -8,6 +8,7 @@
   "license": "ISC",
   "scripts": {
     "start": "pnpm --parallel dev",
+    "build": "pnpm -r build",
     "preinstall": "npx only-allow pnpm"
   },
   "devDependencies": {

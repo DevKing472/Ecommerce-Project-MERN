@@ -4,7 +4,7 @@ export function UserReducer(state: User, action: UserActions) {
   const initialState: User = {
     username: '',
     email: '',
-    id: '',
+    _id: '',
     isAdmin: false,
     isAnon: false,
   };

@@ -11,6 +11,7 @@ const products: IProduct[] = [
   {
     name: 'Macbook',
     quantityOnStock: 1,
+    description: '',
     createdAt: new Date(),
     price: 100,
     titleImage: 'default',
@@ -21,6 +22,7 @@ const products: IProduct[] = [
     quantityOnStock: 15,
     createdAt: new Date(),
     price: 200,
+    description: '',
     titleImage: 'default',
     updatedAt: new Date(),
   },
@@ -29,6 +31,7 @@ const products: IProduct[] = [
     quantityOnStock: 10,
     createdAt: new Date(),
     price: 400,
+    description: '',
     titleImage: 'default',
     updatedAt: new Date(),
   },

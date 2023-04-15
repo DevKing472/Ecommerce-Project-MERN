@@ -48,7 +48,7 @@ export async function login(req: Request, res: Response, next: NextFunction) {
     res.json({
       success: true,
       user: {
-        id: user.id,
+        _id: user.id,
         username: user.username,
         email: user.email,
         isAdmin: user.isAdmin,
@@ -111,7 +111,7 @@ export async function register(
     res.json({
       success: true,
       user: {
-        id: user.id,
+        _id: user.id,
         username: user.username,
         email: user.email,
         isAdmin: user.isAdmin,
