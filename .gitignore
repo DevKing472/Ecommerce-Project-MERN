@@ -144,3 +144,4 @@ next-env.d.ts
 *.rest
 statics
 .vscode
+.DS_Store
