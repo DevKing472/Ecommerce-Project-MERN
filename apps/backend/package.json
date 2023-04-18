@@ -39,8 +39,8 @@
     "@types/passport-jwt": "^3.0.8",
     "@types/passport-strategy": "^0.2.35",
     "@types/supertest": "^2.0.12",
-    "@typescript-eslint/eslint-plugin": "^5.58.0",
-    "@typescript-eslint/parser": "^5.58.0",
+    "@typescript-eslint/eslint-plugin": "^5.59.0",
+    "@typescript-eslint/parser": "^5.59.0",
     "@vitest/coverage-c8": "^0.28.5",
     "eslint-config-standard-with-typescript": "^34.0.1",
     "eslint-plugin-import": "^2.27.5",
@@ -49,7 +49,7 @@
     "mongodb-memory-server": "^8.12.2",
     "supertest": "^6.3.3",
     "ts-node": "^10.9.1",
-    "vitest": "^0.28.5"
+    "vitest": "^0.30.1"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -60,7 +60,7 @@
     "express": "^4.18.2",
     "http-errors": "^2.0.0",
     "jsonwebtoken": "^9.0.0",
-    "mongoose": "^7.0.3",
+    "mongoose": "^7.0.4",
     "morgan": "^1.10.0",
     "multer": "1.4.5-lts.1",
     "passport": "^0.6.0",
